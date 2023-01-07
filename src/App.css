@@ -1,3 +1,9 @@
+:root {
+  --current: black;
+  --square-size: 28px;
+  --square-border: 1px solid white;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,213 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.square {
+  border: var(--square-border);
+  background-color: #282c34;
+  width: var(--square-size);
+  height: var(--square-size);
+  padding: 0;
+  transition: border 1s;
+}
+
+.square:hover {
+  background-color: var(--current);
+  transition: background-color 1s;
+}
+
+#row1{
+  padding: 0px;
+  margin: 0px;
+  height: var(--square-size);
+}
+
+.row {
+  padding: 0px;
+  margin: 0px;
+  height: var(--square-size);
+}
+
+.canvas {
+  margin-bottom: 150px;
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.slider {
+  margin: 0 50px;
+  width: 25vw;
+}
+
+#textBox {
+  width: 50vw;
+  /* height: 5vh; */
+  margin-bottom: 150px;
+  resize: none;
+}
+
+.buttonContainer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.styleButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+  border-right: 1px solid white;
+}
+
+.swatchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  border-left: 1px solid white;
+}
+
+.button {
+  border: 1px solid white;
+  background-color: #282c34;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  opacity: 0.8;
+  transition: width 1s, height 1s, margin 1s, margin-top 1s, opacity 1s;
+}
+
+.button:hover {
+  opacity: 1;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  transition: width 1s, height 1s, margin 1s, margin-top 1s, opacity 1s;
+}
+
+.active-swatch, .active-input, .active-border {
+  opacity: 1;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  transition: width 1s, height 1s, margin 1s, margin-top 1s, opacity 1s;
+}
+
+.border{
+  transition: background-color 1s, width 1s, height 1s, margin 1s, margin-top 1s, opacity 1s;
+}
+
+.border:hover {
+  background-color: rgba(255, 255, 255, 0.224);
+  transition: background-color 1s, width 1s, height 1s, margin 1s, margin-top 1s, opacity 1s;
+}
+
+.react-icons {
+  color: white;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+.react-icons:hover {
+  font-size: 40px;
+}
+
+.z {
+  background-color: black;
+}
+
+.w {
+  background-color: white;
+}
+
+.r {
+  background-color: red;
+}
+
+.o {
+  background-color: orange;
+}
+
+.y {
+  background-color: yellow;
+}
+
+.g {
+  background-color: green;
+}
+
+.b {
+  background-color: blue;
+}
+
+.i {
+  background-color: indigo;
+}
+
+.v {
+  background-color: violet;
+}
+
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  /* height: 10vh; */
+  margin: 0px 0 50px 0 ;
+}
+
+.example-thumb {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  background: #ffffff;
+  border: 5px solid #3774ff;
+  border-radius: 100%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+}
+
+.example-thumb.active {
+  background-color: grey;
+}
+
+.example-track {
+  position: relative;
+  background: #ddd;
+}
+
+.example-track.example-track-0 {
+  background: #83a9ff;
+}
+
+.horizontal-slider .example-track {
+  top: 20px;
+  height: 4px;
+}
+
+.horizontal-slider .example-thumb {
+  top: 12px;
+  width: 10px;
+  outline: none;
+  height: 10px;
+  line-height: 38px;
 }
